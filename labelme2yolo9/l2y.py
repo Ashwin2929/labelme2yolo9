@@ -1,6 +1,5 @@
 """
-Updated on Feb 08, 2024 to make it compatible with Yolov8
-@author: spatiallysaying(Durga Prasad,D)
+Updated on Feb 08, 2024 to make it compatible with Yolov9
 
 """
 import base64
