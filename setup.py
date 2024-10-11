@@ -5,12 +5,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
     
 setup(
-    name="Labelme2YOLOv8",
+    name="Labelme2YOLO9",
     version="0.1.4",
-    description="Labelme2YOLOv8 is a powerful tool for converting LabelMe's JSON dataset to YOLOv8  format.",
-    author="Durga Prasad, Dhulipudi",
-    author_email="dgplinux@yahoo.com",
-    url="https://github.com/spatiallysaying/Labelme2YOLOv8",
+    description="Labelme2YOLO9 is a powerful tool for converting LabelMe's JSON dataset to YOLO9  format.",
+    author="Ashwin, Purushothamadhas",
+    author_email="p.ashwin79@gmail.com",
+    url="https://github.com/Ashwin2929/labelme2yolo9",
     packages=find_packages(),
     long_description=long_description,
     long_description_content_type="text/markdown",
