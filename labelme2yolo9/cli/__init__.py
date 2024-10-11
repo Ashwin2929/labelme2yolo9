@@ -5,15 +5,15 @@
 cli init
 """
 import argparse
-from labelme2yolov8.__about__ import __version__
-from labelme2yolov8.l2y import Labelme2YOLOv8
+from labelme2yolo9.__about__ import __version__
+from labelme2yolo9.l2y import Labelme2YOLO9
 
 
 def run():
     """
     run cli
     """
-    parser = argparse.ArgumentParser("labelme2yolov8")
+    parser = argparse.ArgumentParser("labelme2yolo9")
     parser.add_argument(
         "-v", "--version", action="version", version="%(prog)s " + __version__
     )
@@ -45,7 +45,7 @@ def run():
         "--output_format",
         type=str,
         default="polygon",
-        help='The default output format for labelme2yolov8 is "polygon".'
+        help='The default output format for labelme2yolo9 is "polygon".'
         ' However, you can choose to output in bbox format by specifying the "bbox" option.',
     )
     parser.add_argument(
@@ -63,7 +63,7 @@ def run():
         parser.print_help()
         return 0
 
-    convertor = Labelme2YOLOv8(args.json_dir, args.output_format, args.label_list)
+    convertor = Labelme2YOLO9(args.json_dir, args.output_format, args.label_list)
 
     if args.json_name is None:
         convertor.convert(val_size=args.val_size, test_size=args.test_size)
