@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     
 setup(
     name="Labelme2YOLO9",
-    version="0.1.4",
+    version="0.2",
     description="Labelme2YOLO9 is a powerful tool for converting LabelMe's JSON dataset to YOLO9  format.",
     author="Ashwin, Purushothamadhas",
     author_email="p.ashwin79@gmail.com",
