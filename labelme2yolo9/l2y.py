@@ -26,7 +26,7 @@ random.Random().seed(12345678)
 np.random.seed(12345678)
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("labelme2yolov8")
+logger = logging.getLogger("labelme2yolo9")
 
 
 def train_test_split(dataset_index, test_size=0.2):
@@ -145,7 +145,7 @@ def save_yolo_image(json_data, json_dir, image_dir, target_dir, target_name):
     return img_path
 
 
-class Labelme2YOLOv8:
+class Labelme2YOLO9:
     """Labelme to YOLO format converter"""
 
     def __init__(self, json_dir, output_format, label_list):
@@ -169,9 +169,9 @@ class Labelme2YOLOv8:
             self._label_id_map[label] = len(self._label_id_map)
 
     def _make_train_val_dir(self, create_test_dir=False):
-        self._dataset_dir_path = os.path.join(self._json_dir, "YOLOv8Dataset/")
+        self._dataset_dir_path = os.path.join(self._json_dir, "YOLO9Dataset/")
     
-        # Define base paths for test, train, and val inside the YOLOv8Dataset directory
+        # Define base paths for test, train, and val inside the YOLO9Dataset directory
         parts = ["train", "val", "test"] if create_test_dir else ["train", "val"]
         dirs = [os.path.join(self._dataset_dir_path, part) for part in parts]
     
@@ -360,7 +360,7 @@ class Labelme2YOLOv8:
         return None
 
     def _save_dataset_yaml(self):
-        yaml_path = os.path.join(self._json_dir, "YOLOv8Dataset/", "dataset.yaml")
+        yaml_path = os.path.join(self._json_dir, "YOLO9Dataset/", "dataset.yaml")
     
         with open(yaml_path, "w+", encoding="utf-8") as yaml_file:
             train_dir = os.path.join(self._dataset_dir_path, "train/")
